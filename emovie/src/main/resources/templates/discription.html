@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EthioMovie</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/4-col-portfolio.css" rel="stylesheet">
+
+    <link href="discription.css" rel="stylesheet">
+
+  </head>
+
+  <style>
+    
+video{
+    padding-left: 120px;
+    padding-top: -100px;
+    margin: 20px;
+
+}
+img{
+    width: 200px;
+    height: 300px;
+    float: left;
+    margin: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+.dis{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(30, 34, 34);
+    margin: 20px;
+}
+.s{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    color: rgb(25, 45, 48);
+    background-color: rgb(169, 208, 241);
+    margin-left: 45%;
+}
+  
+  </style>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">ethiomovie</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" th:href="@{/}">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/about}">About us</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/}">Sign out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1> 
+      </h1>
+      <p> </p>
+        <a href="view.html"><img src="images/img12.jpg" ></a>
+        
+
+        <P class="dis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquam laudantium alias sit beatae non doloribus sequi? Delectus dicta harum sed quaerat. 
+            Sapiente natus dolores et. Minima deleniti sit numquam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quidem dolorem perspiciatis blanditiis id placeat modi! Impedit pariatur vel qui saepe.
+         Iusto temporibus cumque nulla deleniti itaque quia hic iure. lorem 20
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ducimus amet facere quidem autem quae. Voluptatem modi nulla,
+         odit inventore iure aut officia ullam neque, a facere esse magni vel.
+         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+          </P>
+    
+     
+<p>
+        <video width="600" height="300" controls>
+            <source src="video/x.mp4" type="video/mp4" >    
+        </video>
+</p>
+        <a class="watch" th:href="@{/tryy}"><button class="s">WATCH NOW</button></a>
+        
+        <!-- Footer -->
+    <footer class="py-5 bg-dark">
+            <div class="container">
+              <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+            </div>
+            <!-- /.container -->
+          </footer>
+      
+          <!-- Bootstrap core JavaScript -->
+          <script src="vendor/jquery/jquery.min.js"></script>
+          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+
+  </body>
+
+</html>

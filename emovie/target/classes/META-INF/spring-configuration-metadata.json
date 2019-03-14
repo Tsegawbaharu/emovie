@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.ab.ethioflix.configurations.FileStorageConfigProperties",
+      "sourceType": "com.ab.ethioflix.configurations.FileStorageConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.upload-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.ab.ethioflix.configurations.FileStorageConfigProperties"
+    }
+  ],
+  "hints": []
+}

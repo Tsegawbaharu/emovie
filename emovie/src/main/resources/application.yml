@@ -1,0 +1,81 @@
+---
+spring:
+     #profiles: docker
+     datasource:
+              driverClassName: com.mysql.cj.jdbc.Driver
+              url: jdbc:mysql://localhost:3306/ethiomovies
+              username: root
+              password: root
+---
+spring: 
+      jpa: 
+         hibernate.ddl-auto: none
+         database: mysql
+         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+         
+---
+           
+spring:
+      jpa: 
+         properties:
+                   hibernate: 
+                            format_sql: true
+---
+spring:
+       datasource:
+                 initialization-mode: always
+
+---
+
+
+spring:
+  jpa:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            create-source: metadata
+            scripts:
+              action: create
+              create-target: db_create.sql
+---
+
+## MULTIPART (MultipartProperties)
+# Enable multipart uploads
+spring:
+       servlet: 
+               multipart:
+                         enabled: true
+                         file-size-threshold: 2KB
+                         max-file-size: 200MB
+                         max-request-size: 215MB
+
+---
+
+file:
+      upload-dir: ./uploads
+
+#actuator
+
+management:
+         endpoints:
+                 web:
+                   base-path: /management
+---
+management:
+           endpoints:
+                     web:
+                          exposure:
+                                  include : "*"
+
+---
+# admin client
+spring:
+       application:
+                  name : ethiomovies
+---
+spring: 
+       boot: 
+            admin:
+                  client:
+                         url : http://localhost:9090

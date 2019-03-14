@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Sign up</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+</head>
+<body>
+ <div class="container">
+      <form class="col s12" th:action="@{/adminsignup}" th:object="${user}" th:method="POST" name="signup_form"  role = form"">
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+          <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+                 <h2>Admin EthioFlix Account</h2>
+                 <hr>
+             </div>
+         </div>
+         <div><span class="green-text" th:utext="${successMessage}"></span></div>
+        <div class="row" th:if="${#fields.hasErrors()}">
+				<span class="red-text"> Validation Error! Please correct your input and resubmit. </span>
+			</div>
+       <div class="row form-group">
+          <div class="input-field col s12 l6">
+          <input id="name" type="text" th:field="*{email}" class="validate">
+          <label for="name">Email</label>
+           <span
+					class="helper-text red-text" th:if="${#fields.hasErrors('email')}"
+					th:errors="*{email}">ERROR
+			</span>
+        </div>
+        
+        <div class="input-field col s12 l6">
+        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+          <input id="username" type="text" th:field="*{username}"   placeholder=" Username" ></div>
+           </div>
+          <span
+					class="helper-text red-text" th:if="${#fields.hasErrors('username')}"
+					th:errors="*{username}">ERROR
+			</span>
+       
+      </div>
+
+
+      <div class="row form-group">
+        <div class="input-field col s12 ">
+          <input id="password" type="password" th:field="*{password}" class="validate">
+          <label for="password">Password</label>
+          <span
+					class="helper-text red-text" th:if="${#fields.hasErrors('password')}"
+					th:errors="*{password}">ERROR
+			</span>
+        </div>
+      </div>
+      
+      <div class="row">
+        <button type='submit' name='btn_login' class='col s12 btn btn-success'>Register</button>
+      </div>
+     
+    </form>
+ </div>
+</body>
+</html>
+
